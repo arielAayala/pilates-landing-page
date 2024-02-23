@@ -1,0 +1,56 @@
+---
+import "@fontsource-variable/onest";
+
+interface Props {
+	title: string;
+	description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+
+		<meta
+			name="description"
+			content={description}
+		/>
+		<meta
+			name="viewport"
+			content="width=device-width"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			href="/sdSocorroLogo.png"
+		/>
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+	html {
+		font-family: "Onest Variable", system-ui, sans-serif;
+		background: #f1e8e5;
+	}
+
+	p {
+		color: rgba(105, 105, 105, 0.95);
+		line-height: 1.4;
+		margin-bottom: 1em;
+		font-size: 1em;
+		font-weight: 100;
+		letter-spacing: 0.5px;
+	}
+
+	p strong {
+		color: rgba(105, 105, 105, 1);
+		font-weight: 700;
+	}
+</style>

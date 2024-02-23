@@ -1,0 +1,23 @@
+---
+import { Image } from "astro:assets";
+import Logo from "../assets/sdSocorroLogo.webp";
+---
+
+<div class="w-full relative">
+	<Image
+		src={Logo}
+		class="absolute z-10 left-0 right-0 top-0 bottom-0 m-auto"
+		alt="Socorro - Estudio Pilates"
+		loading="eager"
+		width={300}
+		height={300}
+	/>
+	<video
+		class="w-full h-screen object-cover blur aspect-video object-top animate-fade animate-once animate-duration-[2000ms] animate-ease-linear shadow-xl"
+		muted
+		autoplay
+		loop
+		src="/video.webm"
+		style="clip-path: polygon(100% 0, 100% 85%, 50% 100%, 0 85%, 0 0);"
+	></video>
+</div>

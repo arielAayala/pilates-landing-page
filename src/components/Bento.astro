@@ -1,0 +1,28 @@
+---
+import BentoItem from "./BentoItem.astro";
+import ReformerImage from "../assets/reformer.webp";
+import MatImage from "../assets/mat.webp";
+import CadillacImage from "../assets/cadillac.webp";
+---
+
+<section
+	class="w-full max-w-[1400px] grid grid-cols-10 auto-rows-[25rem] gap-4 mx-auto p-10 sm:p-20">
+	<BentoItem
+		classes=" col-span-10 "
+		title="REFORMER"
+		subtitle="La máquina reformer es una de las máquinas del método pilates más conocidas, debido a que permite ajustarse a las necesidades de cada persona. El pilates reformer centra los movimientos en el músculo o conjunto de músculos que quieras fortalecer."
+		img={ReformerImage}
+	/>
+	<BentoItem
+		classes=" col-span-10 sm:col-span-5 "
+		title="MAT"
+		subtitle="Sus ejercidos están diseñados para mejorar la movilidad de la columna,  fortalecer los músculos del centro, generar mayor estabilidad y ganar flexibilidad."
+		img={MatImage}
+	/>
+	<BentoItem
+		classes=" col-span-10 sm:col-span-5"
+		title="CADILLAC"
+		subtitle="Es una herramienta útil para aquellos que buscan una forma efectiva de trabajar en su fuerza, flexibilidad y control corporal."
+		img={CadillacImage}
+	/>
+</section>
