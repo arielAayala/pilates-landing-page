@@ -2,52 +2,31 @@
 import { Image } from "astro:assets";
 
 interface Props {
-	title: string;
-	subtitle?: string;
 	classes: string;
-	img: any;
+	img?: any;
 }
 
-const { title, subtitle, classes, img } = Astro.props;
+const { classes, img } = Astro.props;
 ---
 
 <article
 	class={classes +
 		" relative rounded-xl overflow-hidden  border-[0.5px] border-black/10 parent"}>
-	<h2
-		class="absolute z-10 p-4 text-white text-3xl font-semibold tracking-wide text-balance opacity-0 select-none">
-		{title}
-	</h2>
-	{
-		subtitle && (
-			<h3 class="absolute mt-10 z-10 p-4 text-white text-md tracking-wide text-balance opacity-0 select-none">
-				{subtitle}
-			</h3>
-		)
-	}
 	<Image
 		class="object-cover w-full h-full"
 		src={img}
-		alt={title}
 		loading="eager"
+		alt="Herramientas"
 	/>
 </article>
 
 <style>
-	img,
-	h2,
-	h3 {
+	img {
+		filter: brightness(0.7);
 		transition: 0.6s;
 	}
 
-	.parent:hover h2,
-	.parent:hover h3 {
-		opacity: 1;
-	}
-
 	.parent:hover img {
-		filter: blur(5px);
-		filter: brightness(0.6);
 		scale: 1.15;
 	}
 </style>

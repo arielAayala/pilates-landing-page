@@ -1,0 +1,40 @@
+---
+import Benefit from "../components/Benefit.astro";
+import breathingImage from "../assets/breathing.png";
+import heartImage from "../assets/healthy-heart.png";
+import mindImage from "../assets/mindfulness.png";
+import workoutImage from "../assets/workout.png";
+---
+
+<article
+	class="text-pretty mt-10 mx-auto px-4 pt-10 text-xl text-left max-w-4xl w-full">
+	<h1
+		class="text-4xl mb-10 font-semibold text-center text-wrap mx-auto tracking-wide">
+		Beneficios
+	</h1>
+	<ul class="flex justify-around pt-10 pb-16 gap-4">
+		<Benefit
+			img={mindImage}
+			benefit="Control"
+		/>
+		<Benefit
+			img={breathingImage}
+			benefit="Respiración"
+		/><Benefit
+			img={workoutImage}
+			benefit="Fuerza"
+		/>
+	</ul>
+	<p>
+		Tiene como objetivo <strong>fortalecer el cuerpo y la mente</strong> desde la
+		parte más profunda a la más superficial, aumentando y uniendo el dinamismo y
+		la fuerza muscular con el <strong
+			>control mental, la relajación y la respiración</strong
+		>.
+	</p>
+	<p>
+		Está
+		<strong>inspirado en criterios médicos</strong> relacionados con la traumatología
+		y la rehabilitación.
+	</p>
+</article>

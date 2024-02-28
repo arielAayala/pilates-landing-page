@@ -1,62 +1,23 @@
 ---
 import { Image } from "astro:assets";
-import Logo from "../assets/sdSocorroLogo.webp";
+import Logo from "../assets/sdSocorroLogo.png";
+import IntroImage from "../assets/cadillac.webp";
 ---
 
-<article
-	id="intro"
-	class="text-xl text-left px-10 sm:px-20 max-w-[70ch] text-pretty mt-24 mb-20 mx-auto animate-fade-up animate-ease-in-out">
+<div class="w-full relative">
 	<Image
 		src={Logo}
+		class="absolute z-10 left-0 right-0 top-0 bottom-0 m-auto"
 		alt="Socorro - Estudio Pilates"
-		class="mb-10 m-auto"
-		width={64}
-		height={64}
 		loading="eager"
+		width={250}
+		height={250}
 	/>
-	<h1
-		class="text-4xl font-semibold text-center text-wrap mx-auto mb-10 tracking-wide select-none">
-		Socorro Desimoni<br /> Estudio Pilates
-	</h1>
-	<p>
-		<strong>Pilates</strong> es un sistema de <strong
-			>entrenamiento físico y mental</strong
-		> creado a principios de siglo XX por Joseph Hubertus Pilates. Tiene como objetivo
-		<strong>fortalecer el cuerpo y la mente</strong> desde la parte más profunda
-		a la más superficial, aumentando y uniendo el dinamismo y la fuerza muscular
-		con el <strong>control mental, la relajación y la respiración</strong>.
-	</p>
-
-	<p>
-		Es una disciplina que combina técnicas de gimnasia, ballet y yoga. Está
-		<strong>inspirado en criterios médicos</strong> relacionados con la traumatología
-		y la rehabilitación.
-	</p>
-</article>
-
-<style>
-	#intro p {
-		animation: fadeIn linear both;
-		animation-timeline: scroll();
-		animation-range: 200px 600px;
-		animation-duration: 1.5s;
-	}
-
-	@keyframes fadeIn {
-		from {
-			opacity: 0;
-			scale: 0.2;
-			translate: 0px 200px;
-		}
-
-		75% {
-			opacity: 0.2;
-			scale: 0.7;
-		}
-		to {
-			opacity: 1;
-			scale: 1;
-			translate: 0px;
-		}
-	}
-</style>
+	<Image
+		class="w-full h-screen object-cover blur aspect-video object-top animate-fade animate-once animate-duration-[2000ms] animate-ease-linear shadow-xl"
+		src={IntroImage}
+		alt="Socorro - Estudio Pilates"
+		loading="eager"
+		style="clip-path: polygon(0 95%, 0 0, 100% 0, 100% 95%, 50% 100%);"
+	/>
+</div>
