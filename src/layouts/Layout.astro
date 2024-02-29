@@ -41,7 +41,8 @@ const { title, description } = Astro.props;
 		background: #f1e8e5;
 	}
 
-	h1 {
+	h1,
+	h2 {
 		font-family: "Kaushan Script", cursive;
 	}
 
@@ -52,10 +53,12 @@ const { title, description } = Astro.props;
 		font-size: 1em;
 		font-weight: 100;
 		letter-spacing: 0.5px;
+		text-wrap: pretty;
+		text-align: center;
 	}
 
 	p strong {
 		color: rgba(105, 105, 105, 1);
-		font-weight: 700;
+		font-weight: 600;
 	}
 </style>

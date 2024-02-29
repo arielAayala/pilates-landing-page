@@ -1,0 +1,51 @@
+---
+import ServicesItem from "./ServicesItem.astro";
+import ReformerImage from "../assets/reformer.webp";
+import MatImage from "../assets/mat.webp";
+import CadillacImage from "../assets/cadillac.webp";
+import PrivateClassImage from "../assets/private.jpg";
+import GroupClassImage from "../assets/group.jpg";
+---
+
+<section
+	id="services"
+	class="text-pretty my-10 mx-auto px-8 pt-8 text-xl text-left max-w-4xl w-full">
+	<h2 class="text-4xl mb-10 text-center text-wrap mx-auto tracking-wide">
+		Nuestros Servicios
+	</h2>
+	<div class="bento-box">
+		<ServicesItem
+			img={PrivateClassImage}
+			services={"Sesiones Privadas"}
+			description="Recibe atención personalizada y entrenamientos adaptados a tus necesidades individuales."
+		/>
+		<ServicesItem
+			img={GroupClassImage}
+			services="Clases en grupo"
+			description="Únete a nuestras clases dinámicas en grupo y disfruta del Pilates con otros entusiastas."
+		/>
+		<ServicesItem
+			img={MatImage}
+			services="Mat Pilates"
+			description="Fortalece tu núcleo, mejora la flexibilidad y aumenta la conciencia corporal con nuestras clases de Pilates en colchoneta."
+		/>
+		<ServicesItem
+			img={CadillacImage}
+			description="Experimenta la versatilidad y la intensidad del Pilates en Cadillac con nuestras sesiones diseñadas para desafiar y fortalecer tu cuerpo de manera integral."
+			services="Cadillac Pilates"
+		/>
+		<ServicesItem
+			img={ReformerImage}
+			services="Reformer Pilates"
+			description="Desafía tu cuerpo y esculpe tus músculos con nuestras sesiones de Pilates en reformer, utilizando equipo especializado para mayor resistencia y soporte."
+		/>
+	</div>
+</section>
+
+<style>
+	.bento-box {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 20px;
+	}
+</style>

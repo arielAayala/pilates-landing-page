@@ -5,19 +5,18 @@ import IntroImage from "../assets/cadillac.webp";
 ---
 
 <div class="w-full relative">
-	<Image
-		src={Logo}
-		class="absolute z-10 left-0 right-0 top-0 bottom-0 m-auto"
-		alt="Socorro - Estudio Pilates"
-		loading="eager"
-		width={250}
-		height={250}
-	/>
+	<div
+		class="absolute top-0 left-0 right-0 bottom-10 m-auto z-10 flex flex-col justify-center text-center text-white">
+		<h3>Bienvenidos a</h3>
+		<h1 class="text-4xl mb-10 text-center text-wrap mx-auto tracking-wide">
+			Socorro Desimoni Estudio de Pilates
+		</h1>
+	</div>
 	<Image
 		class="w-full h-screen object-cover blur aspect-video object-top animate-fade animate-once animate-duration-[2000ms] animate-ease-linear shadow-xl"
 		src={IntroImage}
 		alt="Socorro - Estudio Pilates"
 		loading="eager"
-		style="clip-path: polygon(0 95%, 0 0, 100% 0, 100% 95%, 50% 100%);"
+		style="clip-path: polygon(0 75%, 0 0, 100% 0, 100% 75%, 50% 85%); filter: brightness(0.5);"
 	/>
 </div>

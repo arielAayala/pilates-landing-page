@@ -1,0 +1,21 @@
+---
+import { Image } from "astro:assets";
+import Logo from "../assets/sdSocorroLogo.png";
+---
+
+<header
+	class="flex justify-around py-8 h-11 w-full items-center animate-fade animate-once animate-duration-[2000ms] animate-ease-linear shadow-xl">
+	<Image
+		src={Logo}
+		alt={"Socorro Desimoni - Estudio de pilates"}
+		width={60}
+		height={60}
+	/>
+	<nav>
+		<ul class="flex justify-between gap-4 text-sm sm:text-lg">
+			<li><a href="#about">Nosotros</a></li>
+			<li><a href="#services">Servicios</a></li>
+			<li><a href="#contact">Contacto</a></li>
+		</ul>
+	</nav>
+</header>

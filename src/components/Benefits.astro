@@ -1,0 +1,25 @@
+---
+import Benefit from "./BenefitItem.astro";
+import breathingImage from "../assets/breathing.png";
+import heartImage from "../assets/healthy-heart.png";
+import mindImage from "../assets/mindfulness.png";
+import workoutImage from "../assets/workout.png";
+---
+
+<ul class="flex justify-around px-8 pb-16 gap-4 flex-wrap">
+	<Benefit
+		img={mindImage}
+		benefit="Relajación"
+	/>
+	<Benefit
+		img={heartImage}
+		benefit="Musculación"
+	/>
+	<Benefit
+		img={breathingImage}
+		benefit="Respiración"
+	/><Benefit
+		img={workoutImage}
+		benefit="Musculación"
+	/>
+</ul>
